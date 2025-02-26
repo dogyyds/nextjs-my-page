@@ -2,7 +2,7 @@
 
 一个现代化、响应式的个人网站，使用 Next.js 15+ 和 React 19 构建，具有多语言支持、暗色模式和流畅动画效果。
 
-![网站预览](public/images/site-preview.png)
+![网站预览](public/images/site-preview.jpeg)
 
 ## ✨ 特性
 
