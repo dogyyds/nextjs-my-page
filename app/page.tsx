@@ -1,101 +1,138 @@
-import Image from "next/image";
+//import Image from "next/image";
+import ProfileSection from "@/components/ProfileSection";
+import MobileProfile from "@/components/MobileProfile"; // 新增移动端卡片组件
+import ProjectsSection from "@/components/ProjectsSection";
+import AboutSection from "@/components/AboutSection";
+import MiniProjectsSection from "@/components/MiniProjectsSection";
+import ClientOnly from "@/components/ClientOnly";
+import { FaGithub } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { BiWorld } from "react-icons/bi";
+import { FaBlog } from "react-icons/fa6";
+import { SiBilibili } from "react-icons/si";
 
-export default function Home() {
+export default function HomePage() {
+  const socialLinks = [
+    {
+      name: "GitHub",
+      icon: <FaGithub className="text-2xl" />,
+      url: "https://github.com/dogyyds",
+      username: "@Dogyyds",
+    },
+    {
+      name: "V2EX",
+      icon: <BiWorld className="text-2xl" />,
+      url: "https://www.v2ex.com/",
+      username: "@Dogxi",
+    },
+    {
+      name: "Bilibili",
+      icon: <SiBilibili className="text-2xl" />,
+      url: "https://space.bilibili.com/524190453",
+      username: "@Dogxi_",
+    },
+    {
+      name: "xLog",
+      icon: <FaBlog className="text-2xl" />,
+      url: "https://xlog.dogxi.me",
+      username: "@Dogxi",
+    },
+    {
+      name: "Email",
+      icon: <MdEmail className="text-2xl" />,
+      url: "mailto:hi@dogxi.me",
+      username: "hi@dogxi.me",
+    },
+  ];
+
+  const projects = [
+    // {
+    //   title: "Dogxi's xLog",
+    //   description: "Personal Blog",
+    //   url: "https://xlog.dogxi.me",
+    //   image: "/images/xlog-preview.png",
+    //   status: "online" as const,
+    // },
+    {
+      title: "KiviBot Docs",
+      description: "First Awesome Doc by Nextra",
+      url: "https://xlog.dogxi.me",
+      image: "/images/xlog-preview.png",
+      status: "online" as const,
+    },
+    {
+      title: "📦 我超 盒！",
+      description: "First Next.js Project",
+      url: "https://zzuli.dogxi.me",
+      image: "/images/zzuli-preview.png",
+      status: "online" as const,
+    },
+    {
+      title: "AppIcon Forge",
+      description: "Create & Customize Stunning App Icons Online",
+      url: "https://icon.dogxi.top",
+      image: "/images/icon-preview.png",
+      status: "online" as const,
+    },
+    {
+      title: "API Service",
+      description: "First API serviece by Deno Deploy",
+      url: "https://deno.dogxi.top",
+      image: "/images/api-preview.png",
+      status: "building" as const,
+    },
+  ];
+
+  const miniProjects = [
+    {
+      name: "Next.js 学习",
+      url: "https://github.com/dogyyds/nextjs-learn",
+      description: "Next.js 框架学习笔记",
+    },
+    {
+      name: "Node.js 实验室",
+      url: "https://github.com/dogyyds/nodejs-lab",
+      description: "Node.js 实验项目",
+    },
+    { name: "TypeScript 笔记", url: "#", description: "TypeScript 学习记录" },
+    { name: "Godot 入门", url: "#", description: "Godot 游戏引擎学习" },
+    { name: "博客系统", url: "#", description: "个人博客系统" },
+    { name: "AI 助手", url: "#", description: "个人AI助手项目" },
+    { name: "这里都是占位的", url: "#", description: "以后再补充QWQ" },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+      <ClientOnly>
+        {/* 移动版头部 - 只在移动端显示，使用新的卡片组件 */}
+        <div className="md:hidden px-4 pt-4">
+          <MobileProfile socialLinks={socialLinks} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="max-w-screen-2xl mx-auto px-4 py-6 sm:py-10">
+          {/* 固定的侧边栏 - 只在桌面端显示 */}
+          <ProfileSection socialLinks={socialLinks} />
+
+          {/* 主内容区 - 在桌面端右侧，移动端全宽 */}
+          <div className="md:ml-[calc(25%+1rem)]">
+            {/* 项目展示 */}
+            <ProjectsSection projects={projects} />
+
+            {/* 底部区域：关于我和小项目 */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              {/* 左侧：关于我 (2/3宽度) */}
+              <div className="md:col-span-2">
+                <AboutSection />
+              </div>
+
+              {/* 右侧：小项目列表 (1/3宽度) */}
+              <div className="md:col-span-1">
+                <MiniProjectsSection projects={miniProjects} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ClientOnly>
     </div>
   );
 }
