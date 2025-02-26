@@ -56,8 +56,8 @@ export default function HomePage() {
     {
       title: "KiviBot Docs",
       description: "First Awesome Doc by Nextra",
-      url: "https://xlog.dogxi.me",
-      image: "/images/xlog-preview.png",
+      url: "https://kivi.dogxi.me",
+      image: "/images/kividoc-preview.png",
       status: "online" as const,
     },
     {
