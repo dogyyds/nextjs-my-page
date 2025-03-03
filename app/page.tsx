@@ -17,7 +17,7 @@ import {
 } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Dogxi - 个人主页",
+  title: "Dogxi - Personal Website",
   description: "👋 Hey there, I'm Dogxi.",
   alternates: {
     canonical: "/",
