@@ -37,14 +37,14 @@ const MobileProfile = ({ socialLinks }: MobileProfileProps) => {
           >
             <Image
               src="https://avatars.githubusercontent.com/u/106546046"
-              //src="http://q.qlogo.cn/headimg_dl?dst_uin=1706328818&spec=640&img_type=jpg"
-              alt="Dogxi's profile picture"
+              alt="Dogxi的个人照片"
               fill
               className={`object-cover transition-all duration-500 ${
                 isAvatarHovered ? "scale-110" : ""
               }`}
               unoptimized
               priority
+              sizes="(max-width: 768px) 96px, 96px"
             />
           </div>
 
@@ -58,7 +58,11 @@ const MobileProfile = ({ socialLinks }: MobileProfileProps) => {
 
         {/* 社交图标区域 */}
         <div className="w-full pt-3 border-t border-gray-100 dark:border-gray-700">
-          <div className="flex justify-center gap-3">
+          <div
+            className="flex justify-center gap-3"
+            role="list"
+            aria-label="社交媒体链接"
+          >
             {socialLinks.map((link, i) => (
               <motion.a
                 key={link.name}
@@ -72,6 +76,8 @@ const MobileProfile = ({ socialLinks }: MobileProfileProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 title={link.name}
+                aria-label={`访问我的${link.name}: ${link.username}`}
+                role="listitem"
               >
                 {link.icon}
               </motion.a>

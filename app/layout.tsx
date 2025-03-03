@@ -14,12 +14,64 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dogxi - Personal Homepage",
-  description:
-    "A personal homepage for Dogxi, a university student interested in web development and game development.",
-  icons: {
-    icon: "/favicon.ico",
+  title: {
+    template: "%s | Dogxi",
+    default: "Dogxi - Page",
   },
+  description: "👋 Welcome to Dogxi's personal website.",
+  keywords: [
+    "Dogxi",
+    "个人主页",
+    "前端开发",
+    "Web开发",
+    "游戏开发",
+    "Next.js",
+    "React",
+  ],
+  authors: [{ name: "Dogxi", url: "https://github.com/dogyyds" }],
+  creator: "Dogxi",
+  publisher: "Dogxi",
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://dogxi.me"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "zh-CN": "/zh-CN",
+      "en-US": "/en-US",
+    },
+  },
+  openGraph: {
+    title: "Dogxi - 个人主页",
+    description: "👋 Welcome to Dogxi's personal website.",
+    url: "https://dogxi.me",
+    siteName: "Dogxi Personal Website",
+    locale: "zh_CN",
+    type: "website",
+    images: [
+      {
+        url: "https://dogxi.me/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dogxi's Personal Website",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -28,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="zh-CN" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
