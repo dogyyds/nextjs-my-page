@@ -133,7 +133,7 @@ export default function HomePage() {
       />
 
       <WebsiteJsonLd
-        name="Dogxi - 个人主页"
+        name="Dogxi - Personal Website"
         url="https://dogxi.me"
         description=" 🐶 一个热爱 Web 开发和游戏开发的菜鸟狗狗。"
         author="Dogxi"

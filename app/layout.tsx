@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   keywords: [
     "Dogxi",
     "个人主页",
+    "Personal Website",
+    "Dogxi's Website",
     "前端开发",
     "Web开发",
     "游戏开发",
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Dogxi - 个人主页",
+    title: "Dogxi - Personal Website",
     description: "👋 Welcome to Dogxi's personal website.",
     url: "https://dogxi.me",
     siteName: "Dogxi Personal Website",
