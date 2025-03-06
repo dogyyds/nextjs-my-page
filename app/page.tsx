@@ -18,7 +18,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Dogxi - Personal Website",
-  description: "👋 Hey there, I'm Dogxi.",
+  description:
+    "👋 Hey there, I'm Dogxi. 🐶 一个热爱 Web 开发和游戏开发的菜鸟狗狗。",
   alternates: {
     canonical: "/",
   },

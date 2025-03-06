@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     template: "%s | Dogxi",
     default: "Dogxi - Page",
   },
-  description: "👋 Welcome to Dogxi's personal website.",
+  description:
+    "👋 Welcome to Dogxi's personal website.🐶 一个热爱 Web 开发和游戏开发的菜鸟狗狗。",
   keywords: [
     "Dogxi",
     "个人主页",
@@ -48,7 +49,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Dogxi - Personal Website",
-    description: "👋 Welcome to Dogxi's personal website.",
+    description:
+      "👋 Welcome to Dogxi's personal website.🐶 一个热爱 Web 开发和游戏开发的菜鸟狗狗。",
     url: "https://dogxi.me",
     siteName: "Dogxi Personal Website",
     locale: "zh_CN",
