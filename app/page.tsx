@@ -142,6 +142,7 @@ export default function HomePage() {
 
       <ProjectJsonLd projects={projectsForJsonLd} />
 
+      <h1 hidden> Dogxi`s Website </h1>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
         <ClientOnly>
           {/* 移动版头部 - 只在移动端显示，使用新的卡片组件 */}
